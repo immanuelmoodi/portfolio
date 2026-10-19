@@ -1,0 +1,4 @@
+User-agent: *
+# Keep portfolio pages out of search via their HTML noindex directives.
+# Prevent routine crawling of directly hosted PDF case studies.
+Disallow: /case-studies/
