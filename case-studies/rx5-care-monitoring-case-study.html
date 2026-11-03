@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="RX5 Care Monitoring System — a product design case study by Immanuel Moodi. Connected elderly care monitoring across web and mobile.">
+<meta name="theme-color" content="#17264a">
+<title>RX5 Care Monitoring System — Product Design Case Study | Immanuel Moodi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="rx5-case-study.css">
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"></div>
+<header class="case-nav">
+  <div class="case-brand" aria-label="RX5 product design case study"><span class="brand-symbol">RX5</span><span>RX5 CARE MONITORING <small>PRODUCT DESIGN CASE STUDY</small></span></div>
+  <button class="mobile-menu" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <nav class="case-links" id="caseLinks" aria-label="Case study sections">
+    <a href="#overview">Overview</a><a href="#research">Research</a><a href="#architecture">Architecture</a><a href="#design">Design</a><a href="#validation">Design review</a>
+  </nav>
+  <a class="nav-back" href="../projects.html#elderly-care-monitoring">← Back to Projects</a>
+</header>
+
+<main>
+<section class="hero" id="top">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="eyebrow-dot"></span> HEALTHCARE TECHNOLOGY · IoT · WEB + MOBILE</div>
+    <div class="award-line"><span class="award-star">✦</span> BEST DESIGN AWARD <i>JAPAN</i></div>
+    <h1>Smarter care.<br><em>Connected</em> oversight.</h1>
+    <p class="hero-lede">Designing a connected monitoring experience that brings patient signals, room context and device operations into one clear system.</p>
+    <div class="hero-meta">
+      <div><small>ROLE</small><strong>Lead Product Designer</strong></div>
+      <div><small>PLATFORM</small><strong>Web application + mobile</strong></div>
+      <div><small>DOMAIN</small><strong>Elderly care / IoT</strong></div>
+    </div>
+    <a class="primary-link" href="#overview">Explore the case study <span>↓</span></a>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-glow"></div>
+    <div class="hero-image-wrap"><img src="../assets/rx5/rx5-home-dashboard.png" alt="RX5 web monitoring dashboard showing patient alert cards and a building map"></div>
+    <div class="hero-mobile"><img src="../assets/rx5/rx5-mobile-home.png" alt="RX5 mobile monitoring dashboard"></div>
+    <div class="floating-note"><span class="pulse"></span><div><b>One connected view</b><small>Signals · rooms · devices</small></div></div>
+  </div>
+  <div class="hero-bottom"><span>CASE STUDY 01 / 10</span><span>SCROLL TO EXPLORE ↓</span></div>
+</section>
+
+<section class="section intro-section" id="overview">
+  <div class="section-index">01 <span>PROJECT OVERVIEW</span></div>
+  <div class="section-heading"><p class="eyebrow">THE PRODUCT</p><h2>One connected view of<br>elderly care operations.</h2></div>
+  <div class="intro-grid">
+    <div class="intro-main"><p class="lead">RX5 is a connected care monitoring platform that brings together sensor readings, patient-related events and room conditions so care teams can understand what is happening and where attention may be needed.</p>
+    <p>The system connects monitoring signals—including patient position, temperature, humidity, ambience, noise, door status and SOS-related events—with the patient, room and device information needed for follow-up. Its web experience supports operational oversight and administration; the mobile experience makes essential workflows accessible in a compact format.</p>
+    <p class="callout-text">The design challenge: turn a complex ecosystem of sensors, devices, rooms and alerts into a coherent operational experience.</p></div>
+    <aside class="project-facts">
+      <div><small>MY ROLE</small><strong>Lead Product Designer</strong></div>
+      <div><small>DESIGN SCOPE</small><strong>Product framing · UX architecture · Interaction design · Web & mobile UI</strong></div>
+      <div><small>COLLABORATION</small><strong>Product stakeholders, hardware and engineering teams</strong></div>
+      <div><small>RECOGNITION</small><strong>Best Design Award — Japan</strong></div>
+    </aside>
+  </div>
+  <div class="signal-strip">
+    <div><span class="signal-icon">⌁</span><b>Temperature</b></div><div><span class="signal-icon">◌</span><b>Humidity</b></div><div><span class="signal-icon">☼</span><b>Ambience</b></div><div><span class="signal-icon">▰</span><b>Position</b></div><div><span class="signal-icon">◧</span><b>Door status</b></div><div><span class="signal-icon">◖</span><b>Noise / SOS</b></div>
+  </div>
+</section>
+
+<section class="section dark-section" id="challenge">
+  <div class="section-index light-index">02 <span>THE CHALLENGE</span></div>
+  <div class="section-heading"><p class="eyebrow">PROBLEM SPACE</p><h2>More connected signals.<br><em>More cognitive load.</em></h2><p class="section-sub">The challenge was not simply displaying more data. It was helping different users interpret it, locate its source and move to the right next step.</p></div>
+  <div class="challenge-grid">
+    <article><span>01</span><h3>Fragmented signals</h3><p>Different sensors communicate different conditions. Without a shared view, it is harder to interpret those signals together.</p><div class="mini-tags"><i>Temperature</i><i>Position</i><i>Ambience</i></div></article>
+    <article><span>02</span><h3>Time-sensitive attention</h3><p>Events such as a patient being out of bed, a door being open or unusual noise need to be visible and understandable.</p><div class="mini-tags"><i>Alerts</i><i>Priority</i><i>Context</i></div></article>
+    <article><span>03</span><h3>Operational complexity</h3><p>Device registration, room assignments, nursing stations, extensions and firmware create a second layer of work.</p><div class="mini-tags"><i>Devices</i><i>Inventory</i><i>Firmware</i></div></article>
+    <article><span>04</span><h3>Context switching</h3><p>Users need to move from a monitoring overview to a patient or device record without losing the relationship between them.</p><div class="mini-tags"><i>Patient</i><i>Room</i><i>Device</i></div></article>
+  </div>
+  <div class="challenge-statement"><small>HOW MIGHT WE…</small><p>Help care teams understand monitoring signals, identify the associated patient or room, and manage connected devices through one consistent experience?</p></div>
+</section>
+
+<section class="section" id="research">
+  <div class="section-index">03 <span>RESEARCH</span></div>
+  <div class="section-heading"><p class="eyebrow">UNDERSTANDING THE CARE ENVIRONMENT</p><h2>Start with people, alerts and daily work.</h2><p class="section-sub">The design is informed by elderly-care workflows and published healthcare research on patient monitoring, falls and alarm fatigue.</p></div>
+  <div class="research-layout"><div class="research-methods">
+    <div class="method-card"><span class="method-number">01</span><div><h3>Understand the users</h3><p>I structured the experience around the needs of nurses monitoring patient events, facility teams managing rooms and nursing stations, and technical administrators responsible for connected devices.</p><small>BASED ON THE PRODUCT ROLES AND WORKFLOWS</small></div></div>
+    <div class="method-card"><span class="method-number">02</span><div><h3>Connect the workflows</h3><p>I brought the main workflows together across Home, patient details, Devices, Inventory, room setup and Firmware, keeping urgent monitoring tasks separate from day-to-day administration.</p><small>WEB + MOBILE EXPERIENCE</small></div></div>
+    <div class="method-card"><span class="method-number">03</span><div><h3>Study the care context</h3><p>Published research highlights two important design risks: falls among older adults and alarm fatigue in clinical environments. These findings shaped the focus on clear alerts, visible status and reliable feedback.</p><small>SECONDARY RESEARCH · SOURCES BELOW</small></div></div>
+  </div><aside class="research-insight"><div class="insight-label">KEY RESEARCH TAKEAWAYS</div><h3>What the design needs to support</h3><ul><li><b>Understand the alert</b><span>Show what happened and how the sensor is reporting.</span></li><li><b>Find the right person</b><span>Keep patient and room details close to the alert.</span></li><li><b>Know what is current</b><span>Make device status and last-updated information easy to find.</span></li><li><b>Take the next step</b><span>Make investigation and device-management actions clear.</span></li></ul></aside></div>
+  <div class="research-stats"><article><strong>1 in 4</strong><p>CDC research reports that around 1 in 4 US adults aged 65 and older experiences a fall each year.</p></article><article><strong>85–99%</strong><p>The Joint Commission has reported that a high proportion of clinical alarm signals may not require intervention, contributing to alarm fatigue.</p></article><article><strong>Web + mobile</strong><p>A connected experience for monitoring, patient details and device administration across both platforms.</p></article></div>
+  <p class="source-note">These findings describe wider healthcare challenges and informed the design priorities for RX5. They are not product-performance results.</p>
+  <div class="external-research"><div class="eyebrow">RESEARCH REFERENCES</div>
+    <a href="https://www.cdc.gov/falls/data-research/index.html" target="_blank" rel="noopener"><span>01</span><div><b>CDC — Older Adult Falls</b><small>Falls data and prevention context for adults aged 65 and older.</small></div><i>↗</i></a>
+    <a href="https://www.jointcommission.org/resources/patient-safety-topics/sentinel-event/sentinel-event-alert-newsletters/" target="_blank" rel="noopener"><span>02</span><div><b>The Joint Commission — Sentinel Event Alerts</b><small>Patient-safety context for clinical alarm management.</small></div><i>↗</i></a>
+    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4456276/" target="_blank" rel="noopener"><span>03</span><div><b>Bonafide et al. — Clinical Monitor Alarms</b><small>Published study on alarm exposure and nurse response time.</small></div><i>↗</i></a>
+    <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener"><span>04</span><div><b>W3C — WCAG 2.2</b><small>Accessibility guidance for colour, focus and touch interactions.</small></div><i>↗</i></a>
+  </div>
+</section>
+
+<section class="section persona-section">
+  <div class="section-index">04 <span>WHO USES RX5</span></div>
+  <div class="section-heading"><p class="eyebrow">MAIN USER ROLES</p><h2>Three roles. One connected system.</h2><p class="section-sub">I designed the experience around the responsibilities of each user group.</p></div>
+  <div class="persona-grid">
+    <article class="persona-card"><div class="persona-top"><div class="avatar avatar-nurse">N</div><span>01 / CARE</span></div><h3>Nursing professional</h3><p class="persona-role">Monitors patient conditions and follows up on relevant events.</p><div class="persona-block"><small>NEEDS</small><ul><li>Scan patient alerts quickly</li><li>Understand sensor status</li><li>Open patient details in context</li><li>Access information while moving</li></ul></div><div class="persona-goal">“Help me quickly understand which patient needs attention.”</div></article>
+    <article class="persona-card"><div class="persona-top"><div class="avatar avatar-admin">A</div><span>02 / OPERATIONS</span></div><h3>Facility administrator</h3><p class="persona-role">Maintains rooms, nursing stations and assigned devices.</p><div class="persona-block"><small>NEEDS</small><ul><li>Register and assign devices</li><li>Maintain accurate room records</li><li>Review inventory status</li><li>Configure connected units</li></ul></div><div class="persona-goal">“Help me keep the facility's connected setup organized.”</div></article>
+    <article class="persona-card"><div class="persona-top"><div class="avatar avatar-tech">T</div><span>03 / TECHNICAL</span></div><h3>Technical administrator</h3><p class="persona-role">Maintains device connectivity and software versions.</p><div class="persona-block"><small>NEEDS</small><ul><li>Review device health and status</li><li>Compare firmware versions</li><li>Identify update requirements</li><li>Resolve configuration issues</li></ul></div><div class="persona-goal">“Help me find device issues and manage updates safely.”</div></article>
+  </div>
+</section>
+
+<section class="section journey-section">
+  <div class="section-index">05 <span>USER FLOW</span></div>
+  <div class="section-heading"><p class="eyebrow">FROM ALERT TO ACTION</p><h2>From an alert to the next step.</h2></div>
+  <div class="journey-track">
+    <article><div class="journey-node">01</div><small>DETECT</small><h3>Signal appears</h3><p>A sensor state or alert card surfaces a monitored condition.</p><span class="journey-detail">Alert card · Sensor indicator</span></article>
+    <article><div class="journey-node">02</div><small>LOCATE</small><h3>Find the context</h3><p>Use patient and room identifiers or the building map to understand where it is associated.</p><span class="journey-detail">Patient ID · Room map</span></article>
+    <article><div class="journey-node">03</div><small>INVESTIGATE</small><h3>Review details</h3><p>Open patient information, sensor states, alerts and relevant activity comments.</p><span class="journey-detail">Details · Live · Alerts</span></article>
+    <article><div class="journey-node">04</div><small>FOLLOW UP</small><h3>Take the right action</h3><p>Follow facility procedures or investigate device and configuration issues.</p><span class="journey-detail">Device · Inventory · Firmware</span></article>
+  </div>
+  <div class="flow-diagram" role="img" aria-label="User flow from Home to alert review, patient details, then patient follow-up or device investigation."><div class="flow-start">Open Home</div><span class="flow-arrow">↓</span><div class="flow-step">Review alert card</div><span class="flow-arrow">↓</span><div class="flow-step">Identify patient and room</div><span class="flow-arrow">↓</span><div class="flow-step">Open patient details</div><span class="flow-arrow">↓</span><div class="flow-split"><div><b>Review patient</b><small>Sensor status · Alerts · Activity</small></div><div><b>Check device</b><small>Device status · Assignment · Firmware</small></div></div><span class="flow-arrow">↓</span><div class="flow-end">Follow facility procedure or resolve the device issue</div></div><p class="journey-footnote">The monitoring system supports staff decisions. It does not replace clinical judgement or facility procedures.</p>
+</section>
+
+<section class="section architecture-section" id="architecture">
+  <div class="section-index">06 <span>APP STRUCTURE</span></div>
+  <div class="section-heading"><p class="eyebrow">HOW THE APP IS ORGANIZED</p><h2>Four clear areas in the app.</h2><p class="section-sub">The architecture separates high-frequency monitoring from device administration and maintenance, while keeping related workflows accessible.</p></div>
+  <div class="ia-canvas">
+    <div class="ia-root"><span>RX5 CARE MONITORING SYSTEM</span><b>Connected care platform</b></div>
+    <div class="ia-stem"></div>
+    <div class="ia-branches">
+      <article class="ia-branch home-branch"><div class="ia-head"><span>01</span><b>HOME</b><small>MONITOR</small></div><ul><li>Alert overview</li><li>Sensor quick filters</li><li>Patient alert cards</li><li>Building map</li><li>Refresh / search</li><li>Live preview</li></ul></article>
+      <article class="ia-branch devices-branch"><div class="ia-head"><span>02</span><b>DEVICES</b><small>MANAGE</small></div><ul><li>Device registry</li><li>Base / mobile units</li><li>Door / floor units</li><li>Captured data</li><li>Status and configuration</li></ul></article>
+      <article class="ia-branch inventory-branch"><div class="ia-head"><span>03</span><b>INVENTORY</b><small>ADMINISTER</small></div><ul><li>Device list</li><li>Rooms</li><li>Nursing stations</li><li>Mobile extensions</li><li>Add / configure devices</li></ul></article>
+      <article class="ia-branch firmware-branch"><div class="ia-head"><span>04</span><b>FIRMWARE</b><small>MAINTAIN</small></div><ul><li>All / RX devices / app</li><li>Hardware version</li><li>Software version</li><li>Available version</li><li>Update actions</li></ul></article>
+    </div>
+    <div class="ia-support"><b>PATIENT DETAIL</b><span>Details</span><span>Live</span><span>Alerts</span><span>Settings</span><small>Contextual drill-down from monitoring</small></div>
+  </div>
+  <div class="ia-note"><b>Architecture principle</b><span>Separate the jobs users are trying to complete, then connect them through patient, room and device context.</span></div>
+</section>
+
+<section class="section design-section" id="design">
+  <div class="section-index">07 <span>INTERFACE DESIGN</span></div>
+  <div class="section-heading"><p class="eyebrow">THE PRODUCT IN USE</p><h2>Design for scanning,<br>context and action.</h2><p class="section-sub">The following screens are from the RX5 product mockups. Each view is paired with the UX intent behind its structure.</p></div>
+
+  <article class="screen-feature screen-home">
+    <div class="screen-copy"><div class="screen-label">01 / MONITORING OVERVIEW</div><h3>Home dashboard</h3><p>Brings sensor filters, patient alert cards and room-level context into one operational view. The dashboard is designed to support fast scanning before users move into a more detailed record.</p><ul><li>Quick filters for monitoring categories</li><li>Alert cards with patient and room identifiers</li><li>Building map for room-level context</li><li>Battery, read-aloud and live-preview controls</li></ul><div class="design-insight"><b>Design consideration</b><span>Define alert priority, data freshness and status meaning clearly. Do not rely on colour alone.</span></div></div>
+    <button class="image-button wide-screen" data-image="../assets/rx5/rx5-home-dashboard.png" aria-label="View home dashboard screenshot"><img src="../assets/rx5/rx5-home-dashboard.png" alt="RX5 web home dashboard with alert cards, quick filters and building map"><span>VIEW SCREEN ↗</span></button>
+  </article>
+
+  <article class="screen-feature reverse">
+    <div class="screen-copy"><div class="screen-label">02 / PATIENT CONTEXT</div><h3>Patient details</h3><p>A focused patient record connects identifiers and assigned hardware with live sensor states, alerts and activity comments.</p><ul><li>Details, Live, Alerts and Settings tabs</li><li>Patient, room and device identifiers</li><li>Position, noise, ambience, door and SOS states</li><li>Activity comments and history</li></ul><div class="design-insight"><b>Design consideration</b><span>Make status freshness and critical states clear while preserving the relationship between patient and hardware.</span></div></div>
+    <button class="image-button patient-screen" data-image="../assets/rx5/rx5-patient-details.png" aria-label="View patient details screenshot"><img src="../assets/rx5/rx5-patient-details.png" alt="RX5 patient detail screen with sensor states and activity comments"><span>VIEW SCREEN ↗</span></button>
+  </article>
+
+  <article class="screen-feature">
+    <div class="screen-copy"><div class="screen-label">03 / DEVICE REGISTRY</div><h3>Devices</h3><p>A structured registry makes connected hardware easier to review by aligning device IDs, room numbers, captured data, last-updated information, status and actions.</p><ul><li>Base, mobile, door and floor unit identifiers</li><li>Captured sensor data indicators</li><li>Last-updated timestamps</li><li>Row-level configuration actions</li></ul><div class="design-insight"><b>Design consideration</b><span>Provide labels or tooltips for icon-only actions and clear explanations for stale or failed statuses.</span></div></div>
+    <button class="image-button wide-screen" data-image="../assets/rx5/rx5-device-registry.png" aria-label="View device registry screenshot"><img src="../assets/rx5/rx5-device-registry.png" alt="RX5 device registry table showing connected device IDs, captured data and statuses"><span>VIEW SCREEN ↗</span></button>
+  </article>
+
+  <article class="screen-feature reverse">
+    <div class="screen-copy"><div class="screen-label">04 / FACILITY ADMINISTRATION</div><h3>Inventory & room management</h3><p>Inventory groups device lists, rooms, nursing stations and mobile extensions into related administrative tasks.</p><ul><li>Assigned device list and type filters</li><li>Rooms and nursing-station records</li><li>Mobile extension management</li><li>Configure selected and add-new-device actions</li></ul><div class="design-insight"><b>Design consideration</b><span>Keep setup tasks distinct from live monitoring and make device-to-room relationships explicit.</span></div></div>
+    <button class="image-button wide-screen" data-image="../assets/rx5/rx5-inventory-device-list.png" aria-label="View inventory screenshot"><img src="../assets/rx5/rx5-inventory-device-list.png" alt="RX5 inventory interface with device list, type filters and configuration actions"><span>VIEW SCREEN ↗</span></button>
+  </article>
+
+  <article class="screen-feature">
+    <div class="screen-copy"><div class="screen-label">05 / CONFIGURATION</div><h3>Device setup</h3><p>The configuration workflow links base units, room extensions, nursing stations and associated mobile, door and floor units.</p><ul><li>Grouped form sections</li><li>Patient or guest details</li><li>Primary and secondary nursing-station assignment</li><li>Connected device selection</li></ul><div class="design-insight"><b>Design consideration</b><span>Use clear required-field validation, save feedback and a reviewable configuration summary.</span></div></div>
+    <button class="image-button wide-screen" data-image="../assets/rx5/rx5-device-configuration.png" aria-label="View device configuration screenshot"><img src="../assets/rx5/rx5-device-configuration.png" alt="RX5 configure device form with base unit, room, nurse, mobile, door and floor unit sections"><span>VIEW SCREEN ↗</span></button>
+  </article>
+
+  <article class="screen-feature reverse">
+    <div class="screen-copy"><div class="screen-label">06 / ONBOARDING</div><h3>Device registration</h3><p>Manual entry and QR-code scanning provide two paths for adding a device to the connected ecosystem.</p><ul><li>Serial number and device type entry</li><li>Extension selection</li><li>QR-code scanner workflow</li><li>Alternative manual registration path</li></ul><div class="design-insight"><b>Design consideration</b><span>Communicate scanner availability, successful scans, invalid codes and recovery paths.</span></div></div>
+    <button class="image-button wide-screen" data-image="../assets/rx5/rx5-add-device-qr.png" aria-label="View add device QR screenshot"><img src="../assets/rx5/rx5-add-device-qr.png" alt="RX5 add device interface with manual registration and QR-code scanner option"><span>VIEW SCREEN ↗</span></button>
+  </article>
+
+  <article class="screen-feature">
+    <div class="screen-copy"><div class="screen-label">07 / DEVICE MAINTENANCE</div><h3>Firmware management</h3><p>The firmware workspace compares installed and available hardware/software versions and provides individual or bulk update actions.</p><ul><li>All, RX device and app filters</li><li>Hardware and software versions</li><li>Available version and last updated</li><li>Update selected / update all</li></ul><div class="design-insight"><b>Design consideration</b><span>Confirm scope, compatibility and connectivity; show progress and explain failed updates.</span></div></div>
+    <button class="image-button wide-screen" data-image="../assets/rx5/rx5-firmware-management.png" aria-label="View firmware management screenshot"><img src="../assets/rx5/rx5-firmware-management.png" alt="RX5 firmware management table showing hardware and software versions and update actions"><span>VIEW SCREEN ↗</span></button>
+  </article>
+</section>
+
+<section class="section mobile-section">
+  <div class="section-index">08 <span>MOBILE EXPERIENCE</span></div>
+  <div class="section-heading"><p class="eyebrow">RESPONSIVE BY INTENT</p><h2>Essential workflows,<br>rethought for smaller screens.</h2><p class="section-sub">The mobile app is not simply a compressed desktop layout. It reorganizes dense information into vertical cards, compact navigation and focused task views.</p></div>
+  <div class="mobile-gallery">
+    <figure><button class="image-button mobile-shot" data-image="../assets/rx5/rx5-mobile-home.png" aria-label="View mobile dashboard"><img src="../assets/rx5/rx5-mobile-home.png" alt="RX5 mobile home dashboard with quick filters, patient alerts and building map"></button><figcaption><b>01 / HOME</b><span>Quick filters and stacked alert cards</span></figcaption></figure>
+    <figure><button class="image-button mobile-shot" data-image="../assets/rx5/rx5-mobile-navigation.png" aria-label="View mobile navigation"><img src="../assets/rx5/rx5-mobile-navigation.png" alt="RX5 mobile navigation drawer showing Home, Devices, Inventory and Firmware"></button><figcaption><b>02 / NAVIGATION</b><span>Compact access to four workspaces</span></figcaption></figure>
+    <figure><button class="image-button mobile-shot" data-image="../assets/rx5/rx5-mobile-devices.png" aria-label="View mobile device list"><img src="../assets/rx5/rx5-mobile-devices.png" alt="RX5 mobile device registry in stacked card layout"></button><figcaption><b>03 / DEVICES</b><span>Readable device cards and actions</span></figcaption></figure>
+    <figure><button class="image-button mobile-shot" data-image="../assets/rx5/rx5-mobile-inventory.png" aria-label="View mobile inventory"><img src="../assets/rx5/rx5-mobile-inventory.png" alt="RX5 mobile inventory list with device type and status"></button><figcaption><b>04 / INVENTORY</b><span>Compact device administration</span></figcaption></figure>
+    <figure><button class="image-button mobile-shot" data-image="../assets/rx5/rx5-mobile-firmware.png" aria-label="View mobile firmware"><img src="../assets/rx5/rx5-mobile-firmware.png" alt="RX5 mobile firmware cards with version information"></button><figcaption><b>05 / FIRMWARE</b><span>Vertical version comparison</span></figcaption></figure>
+  </div>
+  <div class="mobile-principles"><div><b>Prioritize</b><span>Surface the essential information first.</span></div><div><b>Reflow</b><span>Convert wide tables into vertical cards.</span></div><div><b>Preserve context</b><span>Keep IDs, status and actions together.</span></div><div><b>Support touch</b><span>Review target size and interaction feedback.</span></div></div>
+</section>
+
+<section class="section validation-section" id="validation">
+  <div class="section-index">09 <span>DESIGN REVIEW</span></div>
+  <div class="section-heading"><p class="eyebrow">CHECKING THE EXPERIENCE</p><h2>Make important information easy to see and use.</h2><p class="section-sub">I evaluated the interface against established usability principles and accessibility considerations, focusing on the clarity of alerts, visibility of system status, error prevention and ease of use.</p></div>
+  <div class="review-intro"><div><strong>12</strong><span>design observations</span></div><p>The review focused on alert clarity, status visibility, clear actions, error prevention and mobile usability. The most important opportunities are listed below.</p></div>
+  <div class="heuristic-list">
+    <article class="high"><span>HIGH</span><div><b>Make alert priority clearer</b><p>Several alerts use the same orange card style. Add a clear priority level and sorting logic.</p></div></article>
+    <article class="high"><span>HIGH</span><div><b>Do not rely on colour alone</b><p>Use text labels or icons as well as colour to show alert and map status.</p></div></article>
+    <article class="high"><span>HIGH</span><div><b>Label device actions</b><p>The device list uses action icons without text labels. Add clear names or tooltips.</p></div></article>
+    <article class="high"><span>HIGH</span><div><b>Explain device errors</b><p>A red status indicator should explain whether a device is offline, failed or reporting old data.</p></div></article>
+    <article class="high"><span>HIGH</span><div><b>Show when information was updated</b><p>Bring the last-updated time closer to alert and patient information so old readings are not mistaken for current ones.</p></div></article>
+    <article class="high"><span>HIGH</span><div><b>Make firmware updates safer</b><p>Show how many devices will be updated, ask for confirmation and display progress or errors.</p></div></article>
+    <article class="medium"><span>MEDIUM</span><div><b>Show scanner connection status</b><p>When adding a device by QR code, show whether the scanner is connected and how to recover if it fails.</p></div></article>
+    <article class="medium"><span>MEDIUM</span><div><b>Clarify patient status controls</b><p>Make it clear whether Normal and Critical are status labels or controls users can change.</p></div></article>
+    <article class="medium"><span>MEDIUM</span><div><b>Keep key mobile filters available</b><p>Review the mobile filter set so important position, door and noise events are not difficult to find.</p></div></article>
+    <article class="medium"><span>MEDIUM</span><div><b>Make mobile actions easier to tap</b><p>Check small icons and touch targets against accessibility guidance.</p></div></article>
+    <article class="low"><span>LOW</span><div><b>Use the same name for the same action</b><p>Use consistent wording for Configure Device wherever the task appears.</p></div></article>
+    <article class="low"><span>LOW</span><div><b>Keep patient detail navigation consistent</b><p>Align the patient detail tabs so the navigation matches across the information architecture and the product screen.</p></div></article>
+  </div>
+  <div class="review-note"><b>In simple terms:</b> I checked whether the screens make the right information easy to notice, understand and act on. These are design-review findings, not measured improvements from user testing.</div>
+</section>
+
+<section class="section outcomes-section">
+  <div class="section-index">10 <span>OUTCOMES & REFLECTION</span></div>
+  <div class="section-heading"><p class="eyebrow">WHAT THE DESIGN BRINGS TOGETHER</p><h2>A connected experience for care teams.</h2></div>
+  <div class="outcome-grid">
+    <article><span>01</span><h3>Operational visibility</h3><p>Monitoring signals, patient alerts and room context are brought together in a single dashboard.</p></article>
+    <article><span>02</span><h3>Traceable relationships</h3><p>Patient details expose the identifiers and extensions connecting people, rooms and hardware.</p></article>
+    <article><span>03</span><h3>Administrative coverage</h3><p>Device lists, room setup, onboarding and firmware have dedicated workflows.</p></article>
+    <article><span>04</span><h3>Cross-platform continuity</h3><p>Core workspaces are adapted for desktop oversight and mobile access.</p></article>
+  </div>
+  <div class="reflection"><div><small>DESIGN REFLECTION</small><h3>Complex products need more than attractive dashboards.</h3></div><p>They need consistent state semantics, meaningful context, careful responsive prioritization and clear recovery paths. RX5 reinforced the importance of designing the complete operational ecosystem—not only the screens users see first.</p></div>
+  <div class="next-steps"><div class="eyebrow">FUTURE OPPORTUNITIES</div><div class="next-grid"><span>01 / Shared alert state model</span><span>02 / Accessibility audit</span><span>03 / Offline and failure states</span><span>04 / Analytics and feedback loop</span><span>05 / Firmware recovery guidance</span></div></div>
+</section>
+
+<section class="closing">
+  <div class="closing-award">✦ BEST DESIGN AWARD · JAPAN</div>
+  <p class="eyebrow">RX5 CARE MONITORING SYSTEM</p>
+  <h2>Designing technology<br>that supports <em>connected care.</em></h2>
+  <p>Lead Product Designer · Web + Mobile · Healthcare Technology</p>
+  <div class="closing-actions"><a href="../projects.html#elderly-care-monitoring">← Back to selected projects</a></div>
+</section>
+</main>
+<footer class="case-footer"><span>© Immanuel Moodi · Product Design Portfolio</span><a href="#top">Back to top ↑</a></footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button><img id="lightboxImage" src="" alt="Expanded RX5 product screen"></div>
+<script src="rx5-case-study.js"></script>
+</body>
+</html>
